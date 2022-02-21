@@ -9,7 +9,7 @@ Supports the offical pom.xml structure that can be read about [here](https://mav
 ## Installation
 
 ```bash
-go get -u github.com/vifraa/gopom
+go get -u github.com/minnanalee/gopom
 ```
 
 
@@ -20,7 +20,7 @@ See below for example:
 package main
 
 import (
-	"github.com/vifraa/gopom"
+	"github.com/minnanalee/gopom"
 	"log"
 )
 
