@@ -55,6 +55,8 @@ type Project struct {
 	Reporting              Reporting              `xml:"reporting"`
 	Profiles               []Profile              `xml:"profiles>profile"`
 	Properties             Properties             `xml:"properties"`
+	//保存dependency:resolve的告警信息
+	Warnings string `xml:"warnings"`
 }
 
 type Properties struct {
@@ -199,6 +201,9 @@ type Dependency struct {
 	SystemPath string      `xml:"systemPath"`
 	Exclusions []Exclusion `xml:"exclusions>exclusion"`
 	Optional   string      `xml:"optional"`
+	//两个新增字段，保持dependency:tree的层级和parent信息
+	Depth   string      `xml:"depth"`
+	Parent   string      `xml:"parent"`
 }
 
 type Exclusion struct {
