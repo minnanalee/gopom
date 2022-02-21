@@ -202,8 +202,13 @@ type Dependency struct {
 	Exclusions []Exclusion `xml:"exclusions>exclusion"`
 	Optional   string      `xml:"optional"`
 	//两个新增字段，保持dependency:tree的层级和parent信息
-	Depth   string      `xml:"depth"`
-	Parent   string      `xml:"parent"`
+	Depth  string `xml:"depth"`
+	Parent string `xml:"parent"`
+	//增加依赖来源字段，可以为：
+	//1 pom：pom文件
+	//2 mvn：mvn dependency:treee
+	//3 bin：二进制文件jar依赖文件
+	Source string `xml:"source"`
 }
 
 type Exclusion struct {
