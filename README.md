@@ -8,6 +8,12 @@ gopom is a Golang module to easily parse and work with maven pom.xml files.
 Supports the offical pom.xml structure that can be read about [here](https://maven.apache.org/ref/3.6.3/maven-model/maven.html).
 ## Installation
 
+2022.2.21
+append Project structure, to story mvn:dependenc/tree information
+1. add warning fields
+2. add dependency.depth
+3. add dependency.parent
+
 ```bash
 go get -u github.com/minnanalee/gopom
 ```
@@ -41,7 +47,7 @@ package main
 
 import (
 	"encoding/xml"
-	"github.com/vifraa/gopom"
+	"github.com/minnanalee/gopom"
 	"log"
 )
 
